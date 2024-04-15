@@ -1,0 +1,25 @@
+Header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MainContainer{
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  height: 80vh;
+}
+button{
+  margin: 20px;
+}
+input{
+  margin: 10px;
+}
+
+.Footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
