@@ -1,0 +1,27 @@
+table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(43, 43, 43);
+  margin-bottom: 80px;
+}
+table tr {
+  padding: 5px;
+}
+table td {
+  text-align: center;
+  min-width: 150px;
+  padding: 5px;
+}
+table th {
+  padding: 5px;
+  background-color: rgb(253, 241, 130);
+  min-width: 150px;
+}
+table tbody tr:nth-child(odd) {
+  background-color: rgb(252, 244, 174);
+}
+table tbody tr:nth-child(even) {
+  background-color: rgb(255, 252, 221);
+}/*# sourceMappingURL=WordsTable.css.map */

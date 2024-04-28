@@ -1,0 +1,63 @@
+[
+    {
+      "word": "cat",
+      "transcription": "kæt",
+      "translation": "кошка",
+      "theme": "животные"
+    },
+    {
+      "word": "house",
+      "transcription": "haʊs",
+      "translation": "дом",
+      "theme": "жилье"
+    },
+    {
+      "word": "book",
+      "transcription": "bʊk",
+      "translation": "книга",
+      "theme": "литература"
+    },
+    {
+      "word": "tree",
+      "transcription": "triː",
+      "translation": "дерево",
+      "theme": "природа"
+    },
+    {
+      "word": "car",
+      "transcription": "kɑːr",
+      "translation": "машина",
+      "theme": "транспорт"
+    },
+    {
+      "word": "friend",
+      "transcription": "frend",
+      "translation": "друг",
+      "theme": "общение"
+    },
+    {
+      "word": "food",
+      "transcription": "fuːd",
+      "translation": "еда",
+      "theme": "питание"
+    },
+    {
+      "word": "water",
+      "transcription": "ˈwɔːtər",
+      "translation": "вода",
+      "theme": "питье"
+    },
+    {
+      "word": "sun",
+      "transcription": "sʌn",
+      "translation": "солнце",
+      "theme": "астрономия"
+    },
+    {
+      "word": "time",
+      "transcription": "taɪm",
+      "translation": "время",
+      "theme": "время"
+    }
+  ]
+  

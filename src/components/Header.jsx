@@ -2,7 +2,7 @@ function Header(){
     return(
         <header>
             <h1>
-                Name of my App :)
+                Word cards :)
             </h1>
         </header>
     );
