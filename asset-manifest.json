@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/word_cards/static/css/main.8ffaa449.css",
+    "main.js": "/word_cards/static/js/main.ec8af23b.js",
+    "static/js/453.43eb32e6.chunk.js": "/word_cards/static/js/453.43eb32e6.chunk.js",
+    "index.html": "/word_cards/index.html",
+    "main.8ffaa449.css.map": "/word_cards/static/css/main.8ffaa449.css.map",
+    "main.ec8af23b.js.map": "/word_cards/static/js/main.ec8af23b.js.map",
+    "453.43eb32e6.chunk.js.map": "/word_cards/static/js/453.43eb32e6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ffaa449.css",
+    "static/js/main.ec8af23b.js"
+  ]
+}
