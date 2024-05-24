@@ -35,7 +35,6 @@
   flex-direction: column;
 }
 .Card .Word {
-  margin: auto;
   font-size: 60px;
   color: rgb(43, 43, 43);
 }
