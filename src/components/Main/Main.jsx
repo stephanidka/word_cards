@@ -15,7 +15,7 @@ function Main(){
     }
     return(
         <div className="MainContainer">
-            <input type="text" placeholder="find a word"/>
+            <input type="text" placeholder="find a word" className="FindAWord"/>
 
             <div className='CardContainer'>
                 <div className="Arrow Left"></div>
