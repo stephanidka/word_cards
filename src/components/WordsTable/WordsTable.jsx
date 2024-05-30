@@ -9,8 +9,9 @@ import React, { useState } from 'react';
 
 function WordsTable() {
 const [editIndex, setEditIndex] = useState(null)
-
 const handleEditClicked = (index) => setEditIndex(index)
+
+
   return (
     <table>
       <thead className='Thead'>

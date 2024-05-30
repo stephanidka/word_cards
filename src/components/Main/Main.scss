@@ -20,30 +20,6 @@
         border-right: 10px solid $arrow-hover-color;
         cursor: pointer;
     }
-
-
-  }
-
-  .Card{
-    width: 400px;
-    height: 250px;
-    background-color: $card-color;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-
-    .Word{
-        @extend %font-fam-card;
-        // margin: auto;
-        font-size: 60px;
-        color: $word-color
-    }
-    .Transcription{
-        margin-bottom: 20px;
-        color: $transcription-color;
-    }
   }
 
   .Arrow {
@@ -61,12 +37,12 @@
 .Right{
     transform: rotate(45deg);
 }
-.Know{
-    margin: auto; padding: 30px;
-    color: rgb(88, 88, 88);
-    font-size: smaller;
-    // border: solid 1px red;
-}
+// .Know{
+//     margin: auto; padding: 30px;
+//     color: rgb(88, 88, 88);
+//     font-size: smaller;
+//     // border: solid 1px red;
+// }
 .Sentence{
     background-color: $sentence-background-color;
     padding: 40px;

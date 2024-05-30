@@ -1,0 +1,23 @@
+@import "../generals.scss"; //не уверена что это тут вообще должно быть
+
+.Card{
+    width: 400px;
+    height: 250px;
+    background-color: $card-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+    .Word{
+        @extend %font-fam-card;
+        // margin: auto;
+        font-size: 60px;
+        color: $word-color
+    }
+    .Transcription{
+        margin-bottom: 20px;
+        color: $transcription-color;
+    }
+  }
