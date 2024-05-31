@@ -1,5 +1,12 @@
 @import "../generals.scss"; //не уверена что это тут вообще должно быть
 
+.Container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
 .Card{
     width: 400px;
     height: 250px;
@@ -20,4 +27,9 @@
         margin-bottom: 20px;
         color: $transcription-color;
     }
-  }
+}
+
+.Card:hover{
+    box-shadow: 0 0 10px $card-hover-color;
+    cursor: pointer;
+}

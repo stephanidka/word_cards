@@ -1,0 +1,15 @@
+.PrevButton {
+  width: 60px;
+  height: 60px;
+  border-top: 10px solid rgb(230, 230, 151);
+  border-right: 10px solid rgb(230, 230, 151);
+  transform: rotate(-135deg);
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.PrevButton:hover {
+  border-top: 10px solid rgb(255, 255, 168);
+  border-right: 10px solid rgb(255, 255, 168);
+  cursor: pointer;
+}/*# sourceMappingURL=PrevButton.css.map */

@@ -2,6 +2,13 @@
   font-family: BodoniMT;
 }
 
+.Container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .Card {
   width: 400px;
   height: 250px;
@@ -18,4 +25,9 @@
 .Card .Transcription {
   margin-bottom: 20px;
   color: rgb(88, 88, 88);
+}
+
+.Card:hover {
+  box-shadow: 0 0 10px rgb(230, 230, 151);
+  cursor: pointer;
 }/*# sourceMappingURL=Card.css.map */

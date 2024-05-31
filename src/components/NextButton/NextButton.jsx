@@ -1,6 +1,6 @@
-import "NextButton.css"
+import "./NextButton.css"
 
 export default function NextButton({onNext}) {
     return (
-        <div className="Arrow Right" onClick={onNext}></div>
+        <div className="NextButton" onClick={onNext}></div>
     )};

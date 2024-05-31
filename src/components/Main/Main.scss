@@ -6,37 +6,18 @@
     justify-content: center;
     flex-direction: column;
   }
-  .CardContainer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    .Card:hover{
-        box-shadow: 0 0 10px $card-hover-color;
-        cursor: pointer;
-    }
-    .Arrow:hover{
-        border-top: 10px solid $arrow-hover-color;
-        border-right: 10px solid $arrow-hover-color;
-        cursor: pointer;
-    }
-  }
+//   .CardContainer{
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: center;
+//     .Card:hover{
+//         box-shadow: 0 0 10px $card-hover-color;
+//         cursor: pointer;
+//     }
 
-  .Arrow {
-    width: 60px;
-    height: 60px;
-    border-top: 10px solid $arrow-color;
-    border-right: 10px solid $arrow-color;
-    // border: solid 1px red;
-    margin-top: auto;
-    margin-bottom: auto;
-}  
-.Left{
-    transform: rotate(-135deg);
-}
-.Right{
-    transform: rotate(45deg);
-}
+//   }
+
 // .Know{
 //     margin: auto; padding: 30px;
 //     color: rgb(88, 88, 88);

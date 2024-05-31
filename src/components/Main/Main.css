@@ -5,39 +5,6 @@
   flex-direction: column;
 }
 
-.CardContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.CardContainer .Card:hover {
-  box-shadow: 0 0 10px rgb(230, 230, 151);
-  cursor: pointer;
-}
-.CardContainer .Arrow:hover {
-  border-top: 10px solid rgb(255, 255, 168);
-  border-right: 10px solid rgb(255, 255, 168);
-  cursor: pointer;
-}
-
-.Arrow {
-  width: 60px;
-  height: 60px;
-  border-top: 10px solid rgb(230, 230, 151);
-  border-right: 10px solid rgb(230, 230, 151);
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.Left {
-  transform: rotate(-135deg);
-}
-
-.Right {
-  transform: rotate(45deg);
-}
-
 .Sentence {
   background-color: rgb(255, 252, 214);
   padding: 40px;

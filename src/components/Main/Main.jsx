@@ -7,11 +7,11 @@ function Main(){
         <div className="MainContainer">
             <input type="text" placeholder="find a word" className="FindAWord"/>
 
-            <div className='CardContainer'>
-                <div className="Arrow Left"></div>
+            {/* <div className='CardContainer'> */}
+
                 <Card />
-                {/* <div className="Arrow Right"></div> */}
-            </div>
+
+            {/* </div> */}
 
             <button>get a sentence</button>
             <div className='Sentence'>Random sentence with that word</div>
