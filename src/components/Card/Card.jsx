@@ -4,6 +4,7 @@ import '../NextButton/NextButton'
 import React, { useState } from 'react';
 import NextButton from '../NextButton/NextButton';
 import PrevButton from '../PrevButton/PrevButton';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 
 export default function Card(){
@@ -34,6 +35,13 @@ export default function Card(){
             <PrevButton 
                 onPrev={handlePrev}/>
             </div>
+            <div className='Wrapper'> 
+            <TransitionGroup>
+                <CSSTransition
+                    key={itemIndex}
+                    timeout={300}
+                    classNames="slide"
+                >
                 <div className="Card" key={itemCard}>
                     <div className='Word'>{itemCard.word}</div>
                     <div className='Transcription'>
@@ -49,6 +57,9 @@ export default function Card(){
                     onClick={handleTranslateClicked}>Translate </button>)}
                     </div>                  
                 </div>
+                </CSSTransition>
+            </TransitionGroup>
+            </div>
             <div>
             <NextButton 
                 onNext={handleNext}/>
