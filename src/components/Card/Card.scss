@@ -11,10 +11,11 @@
 }
 
 .Wrapper {
-    position: absolute;
+    position: relative;
     width: 400px; 
     height: 250px; 
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .Card{
@@ -26,6 +27,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 2;
 
     .Word{
         @extend %font-fam-card;
@@ -38,7 +40,7 @@
     }
 }
 
-.Card:hover{
+.Wrapper:hover{
     box-shadow: 0 0 10px $card-hover-color;
     cursor: pointer;
 }
@@ -47,25 +49,20 @@
 .slide-enter {
     opacity: 0;
     transform: translateX(100%);
-    top: 0; /* Это костыли какие-то, я тоже пытаюсь сделать чтоб карточка не скакала */
-    left: 0; 
-    bottom: 0;
-    right: 0;
+
 }
+
 .slide-enter-active {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0%);
     transition: opacity 300ms, transform 300ms;
 
 }
 .slide-exit {
     opacity: 1;
-    transform: translateX(0);
-    top: 0; 
-    left: 0; 
-    bottom: 0;
-    right: 0;
+    transform: translateX(0%);
 }
+
 .slide-exit-active {
     opacity: 0;
     transform: translateX(-100%);

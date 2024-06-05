@@ -22,10 +22,18 @@ export default function Card(){
             if (itemIndex < Data.length - 1){
                 setItemIndex(itemIndex + 1);
                 setTranslateClicked(false);
+            }
+            else if (itemIndex === Data.length - 1){
+                setItemIndex(0);
+                setTranslateClicked(false);
             }}
         const handlePrev = () => {
             if (itemIndex > 0){
                 setItemIndex(itemIndex - 1);
+                setTranslateClicked(false);
+            }
+            else if (itemIndex === 0){
+                setItemIndex(Data.length - 1);
                 setTranslateClicked(false);
             }}        
 
