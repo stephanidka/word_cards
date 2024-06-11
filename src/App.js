@@ -19,6 +19,7 @@ function App() {
             <div>
                 <Header />
                 <Routes>
+                    <Route path="/word_cards" element={<Home />} />
                     <Route path="/game" element={<Main />} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/about" element={<About />} />
