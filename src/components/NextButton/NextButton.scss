@@ -1,0 +1,16 @@
+@import "../generals.scss"; //не уверена что это тут вообще должно быть
+
+.NextButton {
+    width: 60px;
+    height: 60px;
+    border-top: 10px solid $cat-color;
+    border-right: 10px solid $cat-color;
+    transform: rotate(45deg);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.NextButton:hover{
+    border-top: 10px solid $arrow-hover-color;
+    border-right: 10px solid $arrow-hover-color;
+    cursor: pointer;
+}

@@ -24,4 +24,9 @@ table tbody tr:nth-child(odd) {
 }
 table tbody tr:nth-child(even) {
   background-color: rgb(255, 252, 221);
+}
+
+.EditInput {
+  max-width: 100px;
+  margin: 5px;
 }/*# sourceMappingURL=WordsTable.css.map */

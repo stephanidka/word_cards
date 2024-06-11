@@ -1,0 +1,70 @@
+@charset "UTF-8";
+.Card .Word {
+  font-family: BodoniMT;
+}
+
+.Container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 400px; /* Везде задаю одинаковую ширину чтобы карточка не вылезала за нее */
+  height: 250px; /* и высоту! */
+}
+
+.Wrapper {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.Card {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  background-color: rgb(255, 255, 168);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 2;
+}
+.Card .Word {
+  font-size: 60px;
+  color: rgb(43, 43, 43);
+}
+.Card .Transcription {
+  margin-bottom: 20px;
+  color: rgb(88, 88, 88);
+}
+
+.Wrapper:hover {
+  box-shadow: 0 0 10px rgb(230, 230, 151);
+  cursor: pointer;
+}
+
+/* Animation classes */
+.slide-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.slide-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.slide-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.slide-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 300ms, transform 300ms;
+}/*# sourceMappingURL=Card.css.map */

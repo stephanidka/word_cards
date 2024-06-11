@@ -7,9 +7,9 @@ Header{
 button{
   margin: 5px;
 }
-input{
-  margin: 10px;
-}
+/* input{
+  margin: 5px;
+} */
 
 .Footer{
   display: flex;
