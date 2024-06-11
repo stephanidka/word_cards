@@ -1,8 +1,8 @@
 .NextButton {
   width: 60px;
   height: 60px;
-  border-top: 10px solid rgb(230, 230, 151);
-  border-right: 10px solid rgb(230, 230, 151);
+  border-top: 10px solid rgb(255, 201, 14);
+  border-right: 10px solid rgb(255, 201, 14);
   transform: rotate(45deg);
   margin-top: auto;
   margin-bottom: auto;

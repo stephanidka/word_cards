@@ -1,5 +1,8 @@
 import './Main.css';
 import Card from '../Card/Card';
+import WordsTable from '../WordsTable/WordsTable';
+
+
 
 function Main(){
 
@@ -11,6 +14,8 @@ function Main(){
 
             <button>get a sentence</button>
             <div className='Sentence'>Random sentence with that word</div>
+
+            <WordsTable />
         </div>
     )
 }
