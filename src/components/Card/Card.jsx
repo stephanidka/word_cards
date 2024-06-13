@@ -1,19 +1,21 @@
 import Data from '../../utils/data.json'
 import './Card.css'
 import '../NextButton/NextButton'
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import NextButton from '../NextButton/NextButton';
 import PrevButton from '../PrevButton/PrevButton';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 
-export default function Card(){
+export default function Card({addToLerned}){
 
     const [itemIndex, setItemIndex] = useState(0)
+    const translateButtonRef = useRef(null)
 
     const [translateClicked, setTranslateClicked] = useState(false);
     const handleTranslateClicked = () =>{
         setTranslateClicked(!translateClicked)
+        addToLerned();
         };
 
     const itemCard = Data[itemIndex]    
@@ -62,7 +64,7 @@ export default function Card(){
                         <div className='Translation'>{itemCard.translation}</div>
                     ) : (
                     <button className='TranslateButton'
-                    onClick={handleTranslateClicked}>Translate </button>)}
+                    onClick={() => { handleTranslateClicked(); addToLerned();}}>Translate </button>)}
                     </div>                  
                 </div>
                 </CSSTransition>
