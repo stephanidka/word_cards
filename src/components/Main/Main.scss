@@ -1,4 +1,4 @@
-@import "../generals.scss"; //не уверена что это тут вообще должно быть
+@import "../generals.scss"; 
 
 .MainContainer{
     display: flex;
@@ -8,12 +8,6 @@
     padding-top: 120px;
   }
 
-  // .Know{
-//     margin: auto; padding: 30px;
-//     color: rgb(88, 88, 88);
-//     font-size: smaller;
-//     // border: solid 1px red;
-// }
 .Sentence{
     background-color: $sentence-background-color;
     padding: 40px;
@@ -22,3 +16,46 @@
 .FindAWord{
     margin: 15px;
 }
+
+// .WordsTable{
+//     display: none;
+// }
+.ShowHideContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+
+}
+.Border{
+    border-bottom: 2px dashed $arrow-color;
+    width: 100%;
+    height: 1px;
+}
+
+.ShowHideButton{
+margin: 10px;
+padding-top: 5px;
+cursor: pointer;
+    img {
+        transition: transform 0.5s ease;
+    }
+}
+
+.ShowTheTable{
+    margin-top: 30px;
+    color: rgb(88, 88, 88);
+    font-size: smaller;
+}
+
+.hide{
+    transform: rotate(180deg);
+    // transition: transform 0.5s ease;
+}
+
+// .show{
+//     transform: rotate(180deg);
+//     transition: transform 0.5s ease;
+// }

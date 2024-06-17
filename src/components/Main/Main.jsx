@@ -1,6 +1,7 @@
 import './Main.css';
 import Card from '../Card/Card';
 import WordsTable from '../WordsTable/WordsTable';
+import ShowHideButton from '../../images/show.png'
 import { useState } from 'react';
 
 
@@ -8,10 +9,11 @@ import { useState } from 'react';
 function Main(){
 
     const [lerned, setLerned] = useState(0) //
-
     const addToLerned = () => {
         setLerned(lerned + 1)
     }
+
+    const [show, setShow] = useState(false)
 
     return(
         <div className="MainContainer">
@@ -23,8 +25,21 @@ function Main(){
 
             <button>get a sentence</button>
             <div className='Sentence'>Random sentence with that word</div>
-
-            <WordsTable />
+            <div className='ShowTheTable'>{ show ? 'Hide' : 'Show' } the table</div>
+            <div className='ShowHideContainer'>
+                <div className='Border'></div>
+                <div className='ShowHideButton' onClick={() => setShow(!show)}>
+                    <img 
+                        src={ShowHideButton} 
+                        alt="show hide" 
+                        className={show ? 'hide' : ''}/>
+                </div>
+                <div className='Border'></div>
+            </div>
+            { show && <div className='WordsTable'>
+                <WordsTable />
+            </div>}
+            
         </div>
     )
 }
