@@ -3,6 +3,7 @@ import Card from '../Card/Card';
 import WordsTable from '../WordsTable/WordsTable';
 import ShowHideButton from '../../images/show.png'
 import { useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
 
 
 
@@ -36,10 +37,16 @@ function Main(){
                 </div>
                 <div className='Border'></div>
             </div>
-            { show && <div className='WordsTable'>
+            <CSSTransition
+                    in={show}
+                    timeout={300}
+                    classNames='alert'
+                    unmountOnExit
+                >
+            <div className='WordsTable'>
                 <WordsTable />
-            </div>}
-            
+            </div>
+            </CSSTransition>
         </div>
     )
 }

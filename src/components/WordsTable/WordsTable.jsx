@@ -5,12 +5,34 @@ import edit from '../../images/edit-ic.png';
 import bin from '../../images/bin-ico.png'
 import React, { useState } from 'react';
 
-
-
 function WordsTable() {
-const [editIndex, setEditIndex] = useState(null)
-const handleEditClicked = (index) => setEditIndex(index)
 
+
+const [editIndex, setEditIndex] = useState(null)
+
+const [inputValue, setInputValue] = useState(
+  {
+    word: '',
+    transcription: '',
+    translation: '',
+    theme: ''
+  }
+);
+
+const handleEditClicked = (index) => {
+  setEditIndex(index)
+  const item = Data[index];
+  setInputValue({
+    word: item.word,
+    transcription: item.transcription,
+    translation: item.translation,
+    theme: item.theme
+  });
+}
+
+const handleChangeInputValue = (event) =>{
+  setInputValue(event.target.value)
+}
 
   return (
     <table>
@@ -30,22 +52,34 @@ const handleEditClicked = (index) => setEditIndex(index)
                 <>
                     <td>
                     <input type="text" className='EditInput'
-                    value={item.word} 
+                     placeholder={item.word}
+                     name="word"
+                     value={inputValue.word}
+                     onChange={handleChangeInputValue}
                      /></td>
 
                      <td><input className='EditInput'
                      type="text" 
-                     value={item.translation} 
-                   /></td>
-
-                   <td><input className='EditInput'
-                     type="text" 
-                     value={item.transcription} 
+                     name="translation"
+                     placeholder={item.translation}
+                     value={inputValue.translation}
+                     onChange={(event) => setInputValue(event.target.value)}
                    /></td>
 
                    <td><input className='EditInput'
                     type="text" 
-                    value={item.theme} 
+                    name="transcription"
+                    placeholder={item.transcription}
+                    value={inputValue.transcription}
+                    onChange={(event) => setInputValue(event.target.value)} 
+                   /></td>
+
+                   <td><input className='EditInput'
+                    type="text" 
+                    name="theme"
+                    placeholder={item.theme} 
+                    value={inputValue.theme}
+                    onChange={(event) => setInputValue(event.target.value)}
                   /></td>
                        <td style={{ textAlign: 'right' }}>
                          <button>✓</button>
@@ -63,7 +97,7 @@ const handleEditClicked = (index) => setEditIndex(index)
             <td style={{ textAlign: 'right' }}>
               <button style={{display: 'none'}}>✓</button>
               <button style={{display: 'none'}}>☓</button>
-              <button  onClick={() => handleEditClicked(index)}><img src={edit} alt='edit' /></button>
+              <button onClick={() => handleEditClicked(index)}><img src={edit} alt='edit' /></button>
               <button><img src={bin} alt='delete' /></button>
             </td>
             </>)}
