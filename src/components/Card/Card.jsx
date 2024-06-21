@@ -39,6 +39,12 @@ export default function Card({addToLerned}){
                 setTranslateClicked(false);
             }}        
 
+            useEffect(() =>{
+                if(translateButtonRef.current){
+                    translateButtonRef.current.focus()
+                }
+            },[itemIndex])
+
     return( 
             <div className='Container'>
             <div>

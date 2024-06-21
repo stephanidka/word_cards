@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 
 function WordsTable() {
 
-
+const [data, setData] = useState(Data);
 const [editIndex, setEditIndex] = useState(null)
 
 const [inputValue, setInputValue] = useState(
@@ -21,7 +21,7 @@ const [inputValue, setInputValue] = useState(
 
 const handleEditClicked = (index) => {
   setEditIndex(index)
-  const item = Data[index];
+  const item = data[index];
   setInputValue({
     word: item.word,
     transcription: item.transcription,
@@ -30,9 +30,24 @@ const handleEditClicked = (index) => {
   });
 }
 
-const handleChangeInputValue = (event) =>{
-  setInputValue(event.target.value)
+const handleChangeInputValue = (event) => {
+  const { name, value } = event.target;
+  setInputValue(prevValue => ({
+    ...prevValue,
+    [name]: value
+  }));
+};
+
+const handleSaveClicked = () => {
+  const newData = [...data];
+  newData[editIndex]  = { ...inputValue };
+  setData(newData);
+  setEditIndex(null);
 }
+
+// const inputValide = () => {
+//   return inputValue.word && inputValue.translation && inputValue.transcription && inputValue.theme
+// };
 
   return (
     <table>
@@ -46,7 +61,7 @@ const handleChangeInputValue = (event) =>{
         </tr>
       </thead>
       <tbody>
-        {Data.map((item, index) => (       
+        {data.map((item, index) => (       
               <tr key={index}> 
               {editIndex === index ? (
                 <>
@@ -82,8 +97,13 @@ const handleChangeInputValue = (event) =>{
                     onChange={(event) => setInputValue(event.target.value)}
                   /></td>
                        <td style={{ textAlign: 'right' }}>
-                         <button>✓</button>
-                         <button onClick={() => setEditIndex(null)}>☓</button>
+                         <button
+                          onClick = {handleSaveClicked}
+                          // disabled={!inputValide()} // еще подумать
+                          >✓</button>
+                         <button 
+                          onClick={() => setEditIndex(null)}
+                          >☓</button>
                          <button><img src={edit} alt='edit' /></button>
                          <button><img src={bin} alt='delete' /></button>
                        </td> 
