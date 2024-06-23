@@ -49,7 +49,7 @@ const inputValide = () => {
   return inputValue.word && inputValue.translation && inputValue.transcription && inputValue.theme
 };
 const inputErrorStyle = (value) => {
-  return value.trim() === '' ? { border: '2px solid red' } : {};
+  return value.trim() === '' ? { border: '2px solid tomato' } : {};
 };
 
   return (
