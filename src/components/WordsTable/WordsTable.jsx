@@ -45,9 +45,12 @@ const handleSaveClicked = () => {
   setEditIndex(null);
 }
 
-// const inputValide = () => {
-//   return inputValue.word && inputValue.translation && inputValue.transcription && inputValue.theme
-// };
+const inputValide = () => {
+  return inputValue.word && inputValue.translation && inputValue.transcription && inputValue.theme
+};
+const inputErrorStyle = (value) => {
+  return value.trim() === '' ? { border: '2px solid red' } : {};
+};
 
   return (
     <table>
@@ -67,39 +70,40 @@ const handleSaveClicked = () => {
                 <>
                     <td>
                     <input type="text" className='EditInput'
-                     placeholder={item.word}
+                     style={inputErrorStyle(inputValue.word)}
                      name="word"
                      value={inputValue.word}
                      onChange={handleChangeInputValue}
+                     
                      /></td>
 
                      <td><input className='EditInput'
                      type="text" 
                      name="translation"
-                     placeholder={item.translation}
+                     style={inputErrorStyle(inputValue.translation)}
                      value={inputValue.translation}
-                     onChange={(event) => setInputValue(event.target.value)}
+                     onChange={handleChangeInputValue}
                    /></td>
 
                    <td><input className='EditInput'
                     type="text" 
                     name="transcription"
-                    placeholder={item.transcription}
+                    style={inputErrorStyle(inputValue.transcription)}
                     value={inputValue.transcription}
-                    onChange={(event) => setInputValue(event.target.value)} 
+                    onChange={handleChangeInputValue} 
                    /></td>
 
                    <td><input className='EditInput'
                     type="text" 
                     name="theme"
-                    placeholder={item.theme} 
+                    style={inputErrorStyle(inputValue.theme)} 
                     value={inputValue.theme}
-                    onChange={(event) => setInputValue(event.target.value)}
+                    onChange={handleChangeInputValue}
                   /></td>
                        <td style={{ textAlign: 'right' }}>
                          <button
                           onClick = {handleSaveClicked}
-                          // disabled={!inputValide()} // еще подумать
+                          disabled={!inputValide()} 
                           >✓</button>
                          <button 
                           onClick={() => setEditIndex(null)}
