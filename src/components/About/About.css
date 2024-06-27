@@ -1,0 +1,10 @@
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.aboutText {
+  max-width: 500px;
+}/*# sourceMappingURL=About.css.map */

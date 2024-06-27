@@ -29,4 +29,7 @@ table tbody tr:nth-child(even) {
 .EditInput {
   max-width: 100px;
   margin: 5px;
+}
+.EditInput .EmptyField {
+  border: solid 1px tomato;
 }/*# sourceMappingURL=WordsTable.css.map */
